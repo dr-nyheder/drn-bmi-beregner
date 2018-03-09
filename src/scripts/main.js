@@ -1,17 +1,10 @@
 require('../styles/styles.scss');
 
-
-import Example from './components/example/example-component';
-
-
-
-
+import BmiBeregner from './components/bmi/bmi-beregner';
 
 function init() {
 
-
-    const ex = new Example();
-
+    const bb = new BmiBeregner();
 
 }
 document.addEventListener('DOMContentLoaded', () => {

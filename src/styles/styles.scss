@@ -1,5 +1,19 @@
-  #starter{
-	width:100px;
-	height:50px;
-	background: #CCCCCC;
+$DR-BMI-BLUE:#00ACDC;
+
+.html-container{
+	width:60vw;
+	max-width: 700px;
+	height:65vh;
+	position: absolute;
+	top:20px;
+	left:20px;
+	border: 1px dashed rgb(204, 204, 204);
+}
+[drn-bmi-beregner]{
+	.drn-bmi-inner-container{
+		width:calc(100% - 40px);
+		height:30px;
+		border: 1px solid $DR-BMI-BLUE;
+		margin:20px auto;
+	}
 }
