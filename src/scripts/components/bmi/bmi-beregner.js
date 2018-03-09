@@ -15,7 +15,11 @@ export default class BmiBeregner{
 
             wrapper.classList.add('initialised');
             const innercontainer = create('div', wrapper, 'drn-bmi-inner-container');
-            
+            const question = create('div', innercontainer, 'drn-bmi-question');
+            question.innerHTML = 'BMI beregner';
+
+            const button = create('div', innercontainer, 'drn-bmi-button');
+            button.innerHTML = 'Start';
         }
 
     }
