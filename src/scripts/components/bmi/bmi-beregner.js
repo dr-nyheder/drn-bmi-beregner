@@ -8,6 +8,7 @@ export default class BmiBeregner{
     }
     build(){
         let wrappers = selectAll('[drn-bmi-beregner]:not(.initialised)');
+
         
         for (var i = 0; i < wrappers.length; ++i) {
             console.log('d', i);
@@ -15,12 +16,22 @@ export default class BmiBeregner{
 
             wrapper.classList.add('initialised');
             const innercontainer = create('div', wrapper, 'drn-bmi-inner-container');
-            const question = create('div', innercontainer, 'drn-bmi-question');
-            question.innerHTML = 'BMI beregner';
+            this.startContainer = create('div', innercontainer, 'drn-bmi-start-container');
+            const question = create('div', this.startContainer, 'drn-bmi-question');
+            question.innerHTML = 'Check dit BMI';
 
-            const button = create('div', innercontainer, 'drn-bmi-button');
+
+            const button = create('div', this.startContainer, 'drn-bmi-button');
             button.innerHTML = 'Start';
+            button.addEventListener('click', ()=>{
+                button.classList.add('hidden');
+                this.begin();
+            })
         }
+    
 
+    }
+    begin(){
+        console.log('Begin!');
     }
 }

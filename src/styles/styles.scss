@@ -14,7 +14,7 @@ $DR-BMI-BLUE:#00ACDC;
 [drn-bmi-beregner]{
 	.drn-bmi-inner-container{
 		width:calc(100% - 40px);
-		height:30px;
+		// height:30px;
 		text-align: center;
 		//border: 1px solid $DR-BMI-BLUE;
 		margin:20px auto;
@@ -23,7 +23,7 @@ $DR-BMI-BLUE:#00ACDC;
 		@include responsive-font(5vw, 20px, 40px);
 		color:#000000;
 		text-align: center;
-		font-family: gibsonSemiBold;
+		font-family: gibsonLight;
 		// font-size:24px;
 	}
 	.drn-bmi-button{
@@ -41,7 +41,14 @@ $DR-BMI-BLUE:#00ACDC;
 		text-transform: uppercase;
 		background: $DR-BMI-BLUE;
 		@include responsive-font(3.5vw, 16px, 32px);
+		cursor: pointer;
+		user-select: none;
 
+	}
+
+	.hidden{
+		opacity: 0;
+		transition: 400ms opacity ease-out;
 	}
 }
 

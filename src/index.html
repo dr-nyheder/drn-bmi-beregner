@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <title>BMI beregner test | DR</title>
     <style>
+        .dummy-text{
+            font-family: gibsonRegular,Arial,sans-serif;
+            font-weight: 400;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            color: #4d4d4d;
+            margin: 0;
+            font-size: 18px;
+            line-height: 26px;
+            padding-bottom: 12px;
+            margin:20px;
+        }
         @font-face{
             font-family:"gibsonRegular";
             src:url("https://www.dr.dk/assets/fonts/gibson/regular/gibson-regular-webfont.woff2") format("woff2"),
@@ -14,19 +26,29 @@
             font-family:"gibsonSemiBold";
             src:url("https://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.woff2") format("woff2"),
             url("https://www.dr.dk/assets/fonts/gibson/semiBold/gibson-semiBold-webfont.woff") format("woff");
-            font-weight:normal}
-            
-        </style>
-        
-        <!-- inject:js -->
-        <!-- endinject -->
-        
-    </head>
-    <body>
-        <div class="html-container">
-            <div drn-bmi-beregner></div>
-        </div>
-        
-    </body>
-    </html>
+            font-weight:normal;
+        }
+        @font-face{
+            font-family:"gibsonLight";
+            src:url("https://www.dr.dk/assets/fonts/gibson/light/gibson-light-webfont.woff2") format("woff2"),
+            url("https://www.dr.dk/assets/fonts/gibson/light/gibson-light-webfont.woff") format("woff");
+            font-weight:normal;
+        }    
+    </style>
     
+    <!-- inject:js -->
+    <!-- endinject -->
+    
+</head>
+<body>
+    <div class="html-container">
+        <div drn-bmi-beregner></div>
+        <div class="dummy-text">
+            <p>
+                Placerat nesciunt sapien sed, ligula sodales quis interdum nec, ultrices turpis in odio et eiusmod nam. Luctus vitae dolor eu mauris nisl integer, lorem lectus metus sodales vitae elementum massa.
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
