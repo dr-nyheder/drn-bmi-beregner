@@ -1,6 +1,6 @@
 @import 'responsive-font';
 
-$DR-BMI-BLUE:#00ACDC;
+$DR-BMI-BLUE:#0961ce;
 
 .html-container{
 	width:60vw;
@@ -13,25 +13,44 @@ $DR-BMI-BLUE:#00ACDC;
 }
 [drn-bmi-beregner]{
 	.drn-bmi-inner-container{
-		width:calc(100% - 40px);
-		// height:30px;
+		width:100%;
 		text-align: center;
-		//border: 1px solid $DR-BMI-BLUE;
 		margin:20px auto;
+		@include responsive-font(2.5vw, 14px, 20px);
+		@media screen and (min-width: 500px) {
+			width:calc(100% - 40px);
+		}
 	}
 	.drn-bmi-question{
-		@include responsive-font(5vw, 20px, 40px);
+		// @include responsive-font(5vw, 20px, 40px);
 		color:#000000;
 		text-align: center;
 		font-family: gibsonLight;
-		// font-size:24px;
+		font-size:2em;
+		line-height: 1.3em;
+	}
+	.drn-bmi-field{
+		display: block;
+		box-sizing: border-box;
+		opacity:1;
+		font-family: gibsonRegular;
+		font-size: 1em;
+		// @include responsive-font(2.5vw, 16px, 32px);
+		line-height: 1em;
+		width:80%;
+		margin: 20px auto 10px;
+		padding: 0.5em;
+		border: 1px solid #CECECE;
+		@media screen and (min-width: 500px) {
+			width:58%;
+		}
 	}
 	.drn-bmi-button{
 		color:#FFFFFF;
 		text-align: center;
 		height: auto;
 		width: auto;
-		min-width:58%;
+		min-width:38%;
 		// max-width:230px;
 		box-sizing:border-box;
 		margin: 20px auto 10px;
@@ -40,15 +59,23 @@ $DR-BMI-BLUE:#00ACDC;
 		font-family: gibsonRegular;
 		text-transform: uppercase;
 		background: $DR-BMI-BLUE;
-		@include responsive-font(3.5vw, 16px, 32px);
+		font-size: 1.4em;
+		line-height: 1.3em;
+		// @include responsive-font(3.5vw, 16px, 32px);
 		cursor: pointer;
 		user-select: none;
-
+		&.hidden{
+			opacity: 0;
+			transition: 300ms opacity ease-out;
+		}
+		
 	}
-
-	.hidden{
-		opacity: 0;
-		transition: 400ms opacity ease-out;
+	.drn-bmi-result{
+		margin: 20px auto 10px;
+		font-family: gibsonSemibold;
+		font-size: 1.25em;
+		color:#4d4d4d;
 	}
+	
 }
 
